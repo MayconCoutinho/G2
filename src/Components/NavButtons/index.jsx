@@ -1,14 +1,22 @@
 import { Button, Stack } from "@mui/material";
-
+import { useContext } from 'react'
+import { GlobalContext } from "../../global/context/useContext.js"
 
 export const NavBottons = () => {
-    const theme = {
-        background: "#1a1a1a",
-        '&:hover': {
-            backgroundColor: '#b4b4b44b',
-        },
-        fontSize: "14px",
-        color: "#fff",
+    const { pageNow, setPageNow } = useContext(GlobalContext)
+
+    const theme = (pageLater) => {
+        const buttonNowColor = (pageLater === pageNow ? "#6d6d6d" : "#1a1a1a")
+
+        return {
+            background: buttonNowColor,
+            '&:hover': {
+                backgroundColor: '#b4b4b44b',
+            },
+            fontSize: "14px",
+            color: "#fff",
+            borderRadius: 0,
+        }
     }
     return (
 
@@ -25,14 +33,14 @@ export const NavBottons = () => {
                 borderRadius: 0,
             }}
         >
-            <Button sx={theme}>Geral</Button>
-            <Button sx={theme}>Esportes</Button>
-            <Button sx={theme}>Entretenimento</Button>
-            <Button sx={theme}>Saúde</Button>
-            <Button sx={theme}>Economia</Button>
-            <Button sx={theme}>Polícia</Button>
-            <Button sx={theme}>Brasil</Button>
-            <Button sx={theme}>Ao vivo</Button>
+            <Button sx={theme("Geral")} onClick={() => { setPageNow("Geral") }}>Geral</Button>
+            <Button sx={theme("Esportes")} onClick={() => { setPageNow("Esportes") }}>Esportes</Button>
+            <Button sx={theme("Entretenimento")} onClick={() => { setPageNow("Entretenimento") }}>Entretenimento</Button>
+            <Button sx={theme("Saúde")} onClick={() => { setPageNow("Saúde") }}>Saúde</Button>
+            <Button sx={theme("Economia")} onClick={() => { setPageNow("Economia") }}>Economia</Button>
+            <Button sx={theme("Polícia")} onClick={() => { setPageNow("Polícia") }}>Polícia</Button>
+            <Button sx={theme("Brasil")} onClick={() => { setPageNow("Brasil") }}>Brasil</Button>
+            <Button sx={theme("Ao vivo")} onClick={() => { setPageNow("Ao vivo") }}>Ao vivo</Button>
         </Stack>
     )
 }
