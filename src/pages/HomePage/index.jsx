@@ -1,8 +1,9 @@
 import React from "react";
-import { NewCard } from "../../Components/Card";
-import { Footer } from "../../Components/Footer";
-import { Header } from "../../Components/Header";
-import { NavBottons } from "../../Components/NavButtons";
+import { NewCard } from "../../components/Card";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { NavBottons } from "../../components/NavButtons";
+import { PageNow } from "../../components/PageNow";
 
 export const HomePage = () => {
 
@@ -10,11 +11,7 @@ export const HomePage = () => {
     <>
       <Header />
       <NavBottons/>
-      <NewCard/>
-      <NewCard/>
-      <NewCard/>
-      <NewCard/>
-      <NewCard/>
+      <PageNow/>
       <NewCard/>
       <Footer />
     </>
