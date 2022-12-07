@@ -13,6 +13,7 @@ export const Header = () => {
             lineHeight: "50px",
             textAlign: "center",
             position: "relative",
+            boxShadow:"3px 3px 3px 2px rgba(0, 0, 0, 0.2)"
         }}
         >
             <Stack
@@ -22,10 +23,10 @@ export const Header = () => {
                 fontFamily:"serif",
                 fontSize:"30px",
                 fontWeight: "550",
-                letterSpacing: "4px",
+                letterSpacing: "2px",
             }}
             >
-                IRN
+                RC News
             </Stack>
         </Box>
 

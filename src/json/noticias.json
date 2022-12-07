@@ -1,29 +1,37 @@
 [{ "genero" : "esportes",
-"topico" : "veja os países que jogaram a Copa do Mundo e não existem mais",
+"id": 1,
+"topico" : "Veja os países que jogaram a Copa do Mundo e não existem mais",
 "imagem" : "https://s2.glbimg.com/7tNy2UoVrUkdRfNBt9QOB8PgN4U=/0x0:1699x1106/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/U/l/OO98xNTWaoEjm4UDAQgQ/2022-11-24t202557z-486791938-up1eibo1kr7tn-rtrmadp-3-soccer-worldcup-bra-srb-report.jpg",
 "noticia" : "Com o evento deste ano no Catar, são 22 edições de Copa do Mundo. As únicas edições do evento canceladas foram em 1942 e 1946, ambas por conta da Segunda Guerra Mundial. O Brasil esteve presente em todas as competições e foi campeão em 1958, 1962, 1970, 1994 e 2002, sendo o único pentacampeão do mundo e o que tem mais conquistas. A Alemanha e a Itália dividem a segunda posição do ranking, com quatro títulos cada."
 },{ "genero" : "entretenimento",
 "topico" : "Além de Margot Robbie: veja 11 atores que já ficaram nus em cena",
+"id": 2,
 "imagem" : "https://s2.glbimg.com/cHTIdYXlSB4ZBh-3BPDFUrVuDMI=/0x0:1200x627/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2022/U/0/cGEOmgTvaLcjHENwPz2g/atores-que-ja-ficaram-nus-em-cena.png",
 "noticia" : "Muitos ficaram e tem varias imagens"
 },{ "genero" : "saúde",
 "topico" : "Maricá volta com uso obrigatório de máscara em unidades de saúde",
+"id": 3,
 "imagem" : "https://s2.glbimg.com/Dnii7GD-Dtu7Wf0vbJ7hs0GdPe0=/0x0:1080x484/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/B/6/0EegyBSJAlftCUVHyUgQ/hospital-conde-modesto-leal.jpeg",
 "noticia" : "A Prefeitura de Maricá, na Região Metropolitana do Rio, voltou a decretar o uso obrigatório de máscara nas unidades de saúde do município. A medida foi orientada pelo Comitê Técnico da Secretaria de Saúde, devido ao aumento no número de casos. Os especialistas recomendam ainda o uso do equipamento de proteção individual nos ambientes fechados, no transporte público, nas escolas e nos eventos com grande número de pessoas. De acordo com a secretária de saúde do município, Solange Oliveira, essa é uma forma de frear o contagio da doença."
 },{ "genero" : "polícia",
 "topico" : "Polícia Federal apreende carros de luxo e dinheiro em operação contra o tráfico internacional de drogas",
+"id": 4,
 "imagem" : "https://s2.glbimg.com/fyA9CqnC3DmlIVODkuK2ktya6hk=/0x0:1700x1065/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/C/T/qYVF66RdWLupNoAmw5rQ/carro-apreendidos.jpg",
 "noticia" : "Segundo a polícia, os criminosos colocavam produtos como lidocaína e cafeína em embalagens de agrotóxico para disfarçar em caso de fiscalização. Os produtos causam efeito anestésico ou estimulante e eram usados para aumentar a quantidade da cocaína que seria vendida. Apesar o contrabando de agrotóxico ser crime, a pena é menor do que a de tráfico internacional de drogas."
 },{ "genero" : "brasil",
 "topico" : "Brasil gera 159 mil empregos com carteira assinada em outubro",
+"id": 5,
 "imagem" : "https://s2.glbimg.com/v_3MVS8iD-owmKV4RQKDfJt5BdE=/0x0:1668x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/U/9/K4gRfyR6q6W0dsO9twwA/globo-canal-4-4-9-frame-411940.jpeg",
 "noticia" : "Em outubro, a economia brasileira gerou um saldo de mais 159 mil empregos novos com carteira assinada, uma queda de quase 37% na comparação com o mesmo mês do ano passado. De janeiro a outubro, o saldo é de 2,320 milhões postos novos de trabalho."
 },{ "genero" : "economia",
 "topico" : "Pagamento do 13º salário deve injetar mais de R$ 200 milhões na economia do Alto Tietê, diz Ciesp",
+"id": 6,
 "imagem" : "https://s2.glbimg.com/We69VmD74yTc9czkvngaHC-g6vM=/0x0:3008x2000/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/0/4/8T6z2fSwSZvI5VFO7g4w/1-cni-foto-miguel-angelo.jpg",
 "noticia" : "O Centro das Indústrias do Estado de São Paulo (CIESP) do Alto Tietê calcula que o pagamento extra dos salários, que teve início nesta semana, deve injetar cerca de R$ 276 milhões na região. Segundo a entidade, os reflexos do pagamento da primeira parcela devem ser sentidos nos próximos dias. Isso porque as empresas depositaram os valores da primeira parcela até quarta-feira (30). O restante deve ser pago até 20 de dezembro, com exceção de empresas que realizam o pagamento em uma única parcela."
 },{ "genero" : "ao vivo",
 "topico" : "lofi hip hop radio - beats to relax/study to",
-"video" : "https://www.youtube.com/embed/live_stream?channel=zlYEcYnPeZk",
+"id": 7,
+"video" : "https://www.youtube.com/embed/jfKfPfyJRdk?controls=0&autoplay=1&modestbranding=1",
+"videoChat": "https://www.youtube.com/live_chat?v=jfKfPfyJRdk&embed_domain=irn.surge.sh",
 "noticia" : "Só uma lofi ao vivo"
 }]

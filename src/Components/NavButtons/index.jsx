@@ -27,7 +27,6 @@ export const NavBottons = () => {
                 background: "#1a1a1a",
                 paddingLeft: 5,
                 marginTop: 3,
-                marginBottom: 3,
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, 150px)",
                 borderRadius: 0,
