@@ -2,6 +2,7 @@ import { Box, Stack, Link } from '@mui/material';
 import React from 'react';
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
+import {CustomizedDialogs} from '../Dialog';
 
 export const Footer = () => {
     const socialIcon = {
@@ -36,11 +37,12 @@ export const Footer = () => {
                     fontFamily: "serif",
                     fontSize: "30px",
                     fontWeight: "550",
-                    letterSpacing: "4px",
+                    letterSpacing: "2px",
                     marginBottom: 4,
                 }}
             >
-                IRN
+                RC News
+
             </Stack>
             <Stack direction="row" spacing={2}>
                 <Link
@@ -58,11 +60,11 @@ export const Footer = () => {
                 </Link>
             </Stack>
             <Stack direction="row" spacing={2}>
-                <Link href="/Legal" underline="hover" color="inherit" sx={InfoFooter}>Legal</Link>
-                <Link href="/Cookies" underline="hover" color="inherit" sx={InfoFooter}>Cookies</Link>
-                <Link href="/Privacy" underline="hover" color="inherit" sx={InfoFooter}>Privacy</Link>
-                <Link href="/Shipping" underline="hover" color="inherit" sx={InfoFooter}>Shipping</Link>
-                <Link href="/InfoFooter" underline="hover" color="inherit" sx={InfoFooter}>Refounds</Link>
+                <Link onClick={() => alert("Legal")}underline="hover" color="inherit" sx={InfoFooter}>Legal</Link>
+                <Link onClick={() => alert("Cookies")}  underline="hover" color="inherit" sx={InfoFooter}>Cookies</Link>
+                <Link onClick={() => alert("Privacy")}  underline="hover" color="inherit" sx={InfoFooter}>Privacy</Link>
+                <Link onClick={() => alert("Shipping")}  underline="hover" color="inherit" sx={InfoFooter}>Shipping</Link>
+                <Link onClick={() => alert("Refounds")}  underline="hover" color="inherit" sx={InfoFooter}>Refounds</Link>
             </Stack>
             <span style={{
                 color: "#f2f2f2",
@@ -70,7 +72,7 @@ export const Footer = () => {
                 textAlign: "center",
                 marginTop: 20,
             }}>
-                &copy;2022, Newsletter IRN. All rights reserved.
+                &copy;2022, Newsletter RC News. All rights reserved.
             </span>
         </Box >
 

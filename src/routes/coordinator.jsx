@@ -5,5 +5,11 @@ export const goToVoltar = (navigate) => {
   navigate(-1)
 }
 export const goToLogin = (navigate) => {
-  navigate("/Login")
+  navigate("/Admin")
+}
+export const goToAdminUser = (navigate) => {
+  navigate("/Admin/User")
+}
+export const goToNewsPage = (navigate, id) => {
+  navigate(`/NewsPage/${id}`)
 }
