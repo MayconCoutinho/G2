@@ -6,7 +6,6 @@ import { NavBottons } from "../../components/NavButtons";
 import { PageNow } from "../../components/PageNow";
 
 export const HomePage = () => {
-
   return (
     <>
       <Header />
