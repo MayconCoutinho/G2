@@ -1,52 +1,49 @@
-import { Box, Button, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Button, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useContext } from 'react'
 import { GlobalContext } from "../../global/context/useContext.js"
 import { useNavigate } from "react-router-dom";
 import { goToNewsPage } from '../../routes/coordinator.jsx';
 
 export const NewCard = () => {
-    const { pageNow } = useContext(GlobalContext)
+    const { pageNow, newsletter } = useContext(GlobalContext)
     const navigate = useNavigate();
-    const newsletter = require("../../json/noticias.json");
-
     const VejaMais = () => {
-        if(pageNow.toLowerCase() !== "ao vivo"){
+        if (pageNow.toLowerCase() !== "ao vivo") {
             return <Grid
-            justifyContent={"center"}
-            container
-        >
-            <Button
-                sx={{
-
-                    color: "#fff",
-                    overflowAnchor: "none",
-                    fontFamily: "opensans, opensans-bastian, Arial, sans-serif",
-                    fontSize: "14px",
-                    letterSpacing: "-0,015em",
-                    lineHeight: "150%",
-                    fontWeight: 700,
-                    fontVariationSettings: "initial",
-                    fontFeatureSettings: "initial",
-                    width: "350px",
-                    height: "40px",
-                    marginBottom: "10px",
-                    background: "#1b1b1b",
-                    '&:hover': {
-                        background: '#6b6b6b',
-                    },
-                    borderRadius: 1,
-                }}
+                justifyContent={"center"}
+                container
             >
-                VEJA MAIS
-            </Button>
-        </Grid>
+                <Button
+                    sx={{
+
+                        color: "#fff",
+                        overflowAnchor: "none",
+                        fontFamily: "opensans, opensans-bastian, Arial, sans-serif",
+                        fontSize: "14px",
+                        letterSpacing: "-0,015em",
+                        lineHeight: "150%",
+                        fontWeight: 700,
+                        fontVariationSettings: "initial",
+                        fontFeatureSettings: "initial",
+                        width: "350px",
+                        height: "40px",
+                        marginBottom: "10px",
+                        background: "#1b1b1b",
+                        '&:hover': {
+                            background: '#6b6b6b',
+                        },
+                        borderRadius: 1,
+                    }}
+                >
+                    VEJA MAIS
+                </Button>
+            </Grid>
         }
     }
 
     return (
         <>
             {
-
                 newsletter.map((item) => {
                     if (pageNow.toLowerCase() === "ao vivo") {
                         if (item.genero === pageNow.toLowerCase()) {
@@ -67,12 +64,10 @@ export const NewCard = () => {
                             container
                             direction={"row"}
                             justifyContent={"center"}
+                            padding={"0px 1rem"}
+                            transition={"height 2s ease 0s"}
                             mb={4}
                             onClick={() => goToNewsPage(navigate, item.id)}
-                            sx={{
-                                padding: "0px 1rem",
-                                transition: "height 2s ease 0s"
-                            }}
                         >
                             <Box sx={{
                                 borderTop: "1px solid rgb(219, 219, 219)",
@@ -81,7 +76,7 @@ export const NewCard = () => {
                                 display: "flex",
                                 justifyContent: "space-between",
                                 alignItems: "flex-start",
-                                maxWidth: 600,
+                                width: 600,
                                 cursor: "pointer",
                                 '&:hover': {
                                     backgroundColor: '#b4b4b44b',
@@ -90,7 +85,6 @@ export const NewCard = () => {
                             >
                                 <Box sx={{
                                     display: 'flex', flexDirection: 'column',
-
                                 }}>
                                     <CardContent sx={{ flex: '1 0 auto' }}>
                                         <Typography component="div" variant="h2"
@@ -146,15 +140,15 @@ export const NewCard = () => {
                                 }}>
                                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                         <CardContent sx={{ flex: '1 0 auto' }}>
-                                            <Typography 
-                                            component="div" 
-                                            variant="body2"
-                                            fontWeight={700}
-                                            lineHeight={"20px"}
-                                            letterSpacing={"-1px"}
-                                            fontSize={"1rem"}
-                                            color={"#333"}
-                                            fontFamily={ "opensans, opensans-bastian, Arial, sans-serif"}
+                                            <Typography
+                                                component="div"
+                                                variant="body2"
+                                                fontWeight={700}
+                                                lineHeight={"20px"}
+                                                letterSpacing={"-1px"}
+                                                fontSize={"1rem"}
+                                                color={"#333"}
+                                                fontFamily={"opensans, opensans-bastian, Arial, sans-serif"}
                                             >
                                                 {item.topico}
                                             </Typography>
@@ -172,9 +166,9 @@ export const NewCard = () => {
                         }
                     }
                 })}
-                {
-                    VejaMais()
-                }
+            {
+                VejaMais()
+            }
         </>
     )
 }

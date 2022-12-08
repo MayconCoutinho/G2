@@ -3,10 +3,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import { useContext } from 'react';
+import { GlobalContext } from "../../global/context/useContext.js";
 
 export const NewsPage = () => {
     const { id } = useParams()
-    const newsletter = require("../../json/noticias.json");
+    const {newsletter} = useContext(GlobalContext)
 
     return (
         <>
@@ -22,18 +24,19 @@ export const NewsPage = () => {
                         justifyItems={"start"}
                         alignItems={"center"}
                         flexDirection={"column"}
-                        >
-                    
+                    >
                         <Typography component="h4" variant="h4" sx={{
                             paddingTop: 4,
                             paddingBottom: 4,
+                            paddingRight: 1,
                             fontSize: "38px",
                             fontWeight: 700,
                             fontFamily: "Open Sans",
                             letterSpacing: "-0.04em",
                             lineHeight: "110%",
                             fontVariationSettings: "initial",
-                            marginLeft:"24px"
+                            marginLeft: "24px",
+                            maxWidth: "800px",
                         }}>
                             {item.topico}
                         </Typography>
@@ -42,7 +45,7 @@ export const NewsPage = () => {
                             sx={{
                                 width: "90%",
                                 maxWidth: "800px",
-                                marginLeft:"24px"
+                                marginLeft: "24px"
 
                             }}
                             image={item.imagem}
@@ -58,7 +61,7 @@ export const NewsPage = () => {
                             fontFeatureSettings: "initial",
                             marginBottom: "24px",
                             maxWidth: "800px",
-                            marginLeft:"24px"
+                            marginLeft: "24px"
 
                         }}>
                             {item.noticia}

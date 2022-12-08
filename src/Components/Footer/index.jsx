@@ -1,8 +1,6 @@
 import { Box, Stack, Link } from '@mui/material';
-import React from 'react';
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
-import {CustomizedDialogs} from '../Dialog';
 
 export const Footer = () => {
     const socialIcon = {
