@@ -1,6 +1,6 @@
 import { Button, Stack } from "@mui/material";
-import { useContext } from 'react'
-import { GlobalContext } from "../../global/context/useContext.js"
+import { useContext } from 'react';
+import { GlobalContext } from "../../global/context/useContext.js";
 
 export const NavBottons = () => {
     const { pageNow, setPageNow } = useContext(GlobalContext)
@@ -34,10 +34,10 @@ export const NavBottons = () => {
         >
             <Button sx={theme("Geral")} onClick={() => { setPageNow("Geral") }}>Geral</Button>
             <Button sx={theme("Esportes")} onClick={() => { setPageNow("Esportes") }}>Esportes</Button>
-            <Button sx={theme("Entretenimento")} onClick={() => { setPageNow("Entretenimento") }}>Entretenimento</Button>
-            <Button sx={theme("Saúde")} onClick={() => { setPageNow("Saúde") }}>Saúde</Button>
+            <Button sx={theme("Entreterimento")} onClick={() => { setPageNow("Entreterimento") }}>Entretenimento</Button>
+            <Button sx={theme("Saúde")} onClick={() => { setPageNow("Saude") }}>Saúde</Button>
             <Button sx={theme("Economia")} onClick={() => { setPageNow("Economia") }}>Economia</Button>
-            <Button sx={theme("Polícia")} onClick={() => { setPageNow("Polícia") }}>Polícia</Button>
+            <Button sx={theme("Polícia")} onClick={() => { setPageNow("Policia") }}>Polícia</Button>
             <Button sx={theme("Brasil")} onClick={() => { setPageNow("Brasil") }}>Brasil</Button>
             <Button sx={theme("Ao vivo")} onClick={() => { setPageNow("Ao vivo") }}>Ao vivo</Button>
         </Stack>

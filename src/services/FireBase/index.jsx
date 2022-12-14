@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore, getDocs, collection, doc, setDoc } from "firebase/firestore"
+import "firebase/auth"
+import { collection, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
+import { v1, v4 } from 'uuid'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDxIg1nU21HM_dDJ3XGg2xntoWGcZehGdQ",
@@ -22,11 +24,23 @@ export const getNoticias = async () => {
     console.log(error.response)
   }
 }
-export const postNoticias = async (idNoticia, genero, id, topico, imagem, noticia) => {
+export const getAoVivo = async () => {
   try {
-    setDoc(doc(db, "noticias", idNoticia), {
+    const userCollectionRef = collection(db, "aovivo")
+    const querySnapshot = await getDocs(userCollectionRef)
+    const result = querySnapshot.docs.map((doc) => doc.data())
+    return result
+  } catch (error) {
+    console.log(error.response)
+  }
+}
+export const postNoticias = async (form) => {
+  try {
+    const { genero, topico, imagem, noticia } = form
+
+    setDoc(doc(db, "noticias", v1()), {
       genero,
-      id,
+      id:v4(),
       topico,
       imagem,
       noticia

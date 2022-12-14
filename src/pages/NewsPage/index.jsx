@@ -1,20 +1,20 @@
-import { Grid, Typography, CardMedia } from "@mui/material";
-import React from "react";
+import { CardMedia, Grid, Typography } from "@mui/material";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
-import { useContext } from 'react';
 import { GlobalContext } from "../../global/context/useContext.js";
 
 export const NewsPage = () => {
     const { id } = useParams()
-    const {newsletter} = useContext(GlobalContext)
+    const { newsletter } = useContext(GlobalContext)
+
 
     return (
         <>
             <Header />
             {newsletter.map((item) => {
-                if (item.id === Number(id)) {
+                if (item.id === id) {
                     return <Grid
                         display={"grid"}
                         container direction={"row"}
@@ -45,8 +45,8 @@ export const NewsPage = () => {
                             sx={{
                                 width: "90%",
                                 maxWidth: "800px",
+                                minWidth: "300px",
                                 marginLeft: "24px"
-
                             }}
                             image={item.imagem}
                         />

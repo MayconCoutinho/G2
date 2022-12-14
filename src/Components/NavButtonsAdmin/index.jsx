@@ -19,7 +19,6 @@ export const NavButtonsAdmin = () => {
         }
     }
     return (
-
         <Stack
             variant="contained"
             aria-label="outlined primary button group"
