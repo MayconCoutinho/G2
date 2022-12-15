@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app"
-import "firebase/auth"
 import { collection, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
 import { v1, v4 } from 'uuid'
 

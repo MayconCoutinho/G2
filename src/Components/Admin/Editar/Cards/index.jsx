@@ -1,14 +1,8 @@
 import { Box, CardContent, CardMedia, Grid, Typography } from '@mui/material';
-import { Alerta } from '../Alerta';
 
 export const CardsRender = ({ newsletter, pageNow }) => {
 
-  const AlertaExcluir = (open) =>{
-    return <Alerta open={open}/>
-  }
-
-  return (<>
-    {newsletter.map((item) => {
+  return (newsletter.map((item) => {
     if (pageNow.toLowerCase() === "geral") {
       return <Grid
         container
@@ -17,7 +11,8 @@ export const CardsRender = ({ newsletter, pageNow }) => {
         padding={"0px 1rem"}
         transition={"height 2s ease 0s"}
         mb={4}
-        onClick={() =>{AlertaExcluir(true)}}
+        onClick={() => {
+        }}
       >
         <Box sx={{
           borderTop: "1px solid rgb(219, 219, 219)",
@@ -29,7 +24,7 @@ export const CardsRender = ({ newsletter, pageNow }) => {
           width: 600,
           cursor: "pointer",
           '&:hover': {
-            backgroundColor: '#aa030348',
+            backgroundColor: '#30303047',
           },
         }}
         >
@@ -63,7 +58,5 @@ export const CardsRender = ({ newsletter, pageNow }) => {
         </Box>
       </Grid>
     }
-  })}
-  </>
-  )
+  }))
 }

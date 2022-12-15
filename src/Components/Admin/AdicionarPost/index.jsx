@@ -14,10 +14,8 @@ export const CriarNoticiaRender = ({pageNowAdmin}) => {
 
   const SubmitForm = async () => {
      await postNoticias(formValues)
-
     alert("Formulario Enviado")
     cleanFields()
-
   }
 
   if (pageNowAdmin.toLowerCase() === "adicionar") {

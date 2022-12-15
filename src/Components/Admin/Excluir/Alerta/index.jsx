@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 export const Alerta = ({opentrue}) => {
 
-  const [open, setOpen] = useState(opentrue);
+  const [open, setOpen] = useState(true);
 
   const handleClose = () => {
     setOpen(false);
@@ -16,7 +16,6 @@ export const Alerta = ({opentrue}) => {
     <div>
       <Dialog
         open={open}
-        onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
