@@ -1,8 +1,8 @@
-import { Button, Box, FormControl, InputLabel, Input, InputAdornment, IconButton } from "@mui/material";
-import { Stack } from "@mui/system";
-import React from "react";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel } from "@mui/material";
+import { Stack } from "@mui/system";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToAdminUser } from "../../routes/coordinator";
 
@@ -34,7 +34,7 @@ export const LoginPage = () => {
   };
 
   return (
-    <> 
+    <>
     <Box
       sx={{
         display: 'flex',
