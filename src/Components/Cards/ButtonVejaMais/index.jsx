@@ -19,7 +19,7 @@ export const ButtonVejaMais = ({ pageNow }) => {
           fontFeatureSettings: "initial",
           width: "350px",
           height: "40px",
-          marginBottom: "10px",
+          marginBottom: "50px",
           background: "#1b1b1b",
           '&:hover': {
             background: '#6b6b6b',

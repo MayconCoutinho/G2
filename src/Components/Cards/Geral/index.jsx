@@ -7,7 +7,7 @@ export const CardsGeralRender = ({ newsletter, pageNow }) => {
   const SkeletonTotal = [1,2,3,4]
 
   return (newsletter.length > 0 ?
-    newsletter.map((item) => {
+     newsletter.map((item) => {
       if (pageNow.toLowerCase() === "geral") {
         return <Grid
           container

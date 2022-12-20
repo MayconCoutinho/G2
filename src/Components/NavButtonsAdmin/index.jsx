@@ -1,6 +1,6 @@
 import { Button, Stack } from "@mui/material";
-import { useContext } from 'react'
-import { GlobalContext } from "../../global/context/useContext.js"
+import { useContext } from 'react';
+import { GlobalContext } from "../../global/context/useContext.js";
 
 export const NavButtonsAdmin = () => {
     const { pageNowAdmin, setPageNowAdmin } = useContext(GlobalContext)
@@ -31,7 +31,6 @@ export const NavButtonsAdmin = () => {
                 borderRadius: 0,
             }}
         >
-            <Button sx={theme("Geral")} onClick={() => { setPageNowAdmin("Geral") }}>Geral</Button>
             <Button sx={theme("Adicionar")} onClick={() => { setPageNowAdmin("Adicionar") }}>Adicionar</Button>
             <Button sx={theme("Excluir")} onClick={() => { setPageNowAdmin("Excluir") }}>Excluir</Button>
             <Button sx={theme("Editar")} onClick={() => { setPageNowAdmin("Editar") }}>Editar</Button>

@@ -2,8 +2,7 @@ import { Box, Button, Grid, InputLabel, MenuItem, Select, TextField, Typography 
 import { useForm } from "../../../hooks/useForm";
 import { postNoticias } from "../../../services/FireBase";
 
-export const CriarNoticiaRender = ({pageNowAdmin}) => {
-
+export const CriarNoticiaRender = ({ pageNowAdmin }) => {
   const { formValues, onChange, cleanFields } = useForm({
     genero: "",
     topico: "",
@@ -13,7 +12,7 @@ export const CriarNoticiaRender = ({pageNowAdmin}) => {
   })
 
   const SubmitForm = async () => {
-     await postNoticias(formValues)
+    await postNoticias(formValues)
     alert("Formulario Enviado")
     cleanFields()
   }

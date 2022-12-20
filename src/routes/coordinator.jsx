@@ -1,6 +1,10 @@
 export const goToHomePage = (navigate) => {
   navigate("/")
 }
+export const goToHomeNavPage = (navigate, page, setPageNow) => {
+  setPageNow(page)
+  navigate(`/${page}`)
+}
 export const goToVoltar = (navigate) => {
   navigate(-1)
 }
