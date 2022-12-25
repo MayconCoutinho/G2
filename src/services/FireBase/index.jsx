@@ -63,7 +63,8 @@ export const postNoticias = async (form) => {
       id: id,
       topico,
       imagem,
-      noticia
+      noticia,
+      data: new Date().toISOString()
     });
   } catch (error) {
     console.log(error.response)

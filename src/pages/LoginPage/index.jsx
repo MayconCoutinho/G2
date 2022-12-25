@@ -1,11 +1,16 @@
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel } from "@mui/material";
+import { Box, Button, CircularProgress, FormControl, IconButton, Input, InputAdornment, InputLabel } from "@mui/material";
 import { Stack } from "@mui/system";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { GlobalContext } from "../../global/context/useContext.js";
 import { Token } from '../../hooks/token';
 
 export const LoginPage = () => {
+  const { progresseLogin, setProgresseLogin } = useContext(GlobalContext)
+
+  const navigate = useNavigate()
   Token()
   const [values, setValues] = useState({
     name: '',
@@ -14,9 +19,9 @@ export const LoginPage = () => {
     showPassword: false,
   })
   const Entrar = () => {
+    setProgresseLogin(true)
     window.localStorage.setItem("tokenName",values.name)
     window.localStorage.setItem("tokenPassword",values.password)
-
     Token()
   }
   const handleChange = (prop) => (event) => {
@@ -95,7 +100,9 @@ export const LoginPage = () => {
             size="small"
             variant="contained"
             onClick={() => Entrar()}
-          > Entrar </Button>
+          > {progresseLogin === false ? "Entrar" : <CircularProgress size={25} sx={{
+            color:"#fff",
+            }}/>} </Button>
 
         </Stack>
       </Box>

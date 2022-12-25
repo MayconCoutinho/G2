@@ -9,6 +9,7 @@ export const GlobalProvider = ({ children }) => {
   const [newsletter, setNewsletter] = useState([])
   const [aoVivo, setAoVivo] = useState([])
   const [pageUpdate, setPageUpdate] = useState(1)
+  const [progresseLogin, setProgresseLogin] = useState(false)
 
   useEffect(() => {
     const resultNoticias = getNoticias()
@@ -22,6 +23,6 @@ export const GlobalProvider = ({ children }) => {
 
 
   return (
-    <GlobalContext.Provider value={{ pageNow, setPageNow, pageNowAdmin, setPageNowAdmin, newsletter, aoVivo, setPageUpdate, pageUpdate}}>{children}</GlobalContext.Provider>
+    <GlobalContext.Provider value={{ pageNow, setPageNow, pageNowAdmin, setPageNowAdmin, newsletter, aoVivo, setPageUpdate, pageUpdate,progresseLogin, setProgresseLogin}}>{children}</GlobalContext.Provider>
   )
 }

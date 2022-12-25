@@ -29,7 +29,6 @@ export const CriarNoticiaRender = ({ pageNowAdmin }) => {
         Crie uma Notícia
       </Typography>
       <form onSubmit={SubmitForm}>
-
         <Grid
           container
           justifyContent={"center"}
@@ -74,6 +73,7 @@ export const CriarNoticiaRender = ({ pageNowAdmin }) => {
               name="imagem"
               value={formValues.imagem}
               onChange={onChange}
+              title="URL imagem"
             />
             <TextField
               required
