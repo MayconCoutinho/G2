@@ -1,13 +1,21 @@
 import { Button, Stack } from "@mui/material";
 import { useContext } from 'react';
+import { useNavigate, useParams } from "react-router-dom";
 import { GlobalContext } from "../../global/context/useContext.js";
+import { goToHomeNavPage } from "../../routes/coordinator.jsx";
 
 export const NavBottons = () => {
     const { pageNow, setPageNow } = useContext(GlobalContext)
+    const navigate = useNavigate()
+    const {page} = useParams()
+    if(page){
+      setPageNow(page)
+    } else{
+      setPageNow("Geral")
+    }
 
     const theme = (pageLater) => {
         const buttonNowColor = (pageLater === pageNow ? "#6d6d6d" : "#1a1a1a")
-
         return {
             background: buttonNowColor,
             '&:hover': {
@@ -19,7 +27,6 @@ export const NavBottons = () => {
         }
     }
     return (
-
         <Stack
             variant="contained"
             aria-label="outlined primary button group"
@@ -32,14 +39,14 @@ export const NavBottons = () => {
                 borderRadius: 0,
             }}
         >
-            <Button sx={theme("Geral")} onClick={() => { setPageNow("Geral") }}>Geral</Button>
-            <Button sx={theme("Esportes")} onClick={() => { setPageNow("Esportes") }}>Esportes</Button>
-            <Button sx={theme("Entreterimento")} onClick={() => { setPageNow("Entreterimento") }}>Entretenimento</Button>
-            <Button sx={theme("Saúde")} onClick={() => { setPageNow("Saude") }}>Saúde</Button>
-            <Button sx={theme("Economia")} onClick={() => { setPageNow("Economia") }}>Economia</Button>
-            <Button sx={theme("Polícia")} onClick={() => { setPageNow("Policia") }}>Polícia</Button>
-            <Button sx={theme("Brasil")} onClick={() => { setPageNow("Brasil") }}>Brasil</Button>
-            <Button sx={theme("Ao vivo")} onClick={() => { setPageNow("Ao vivo") }}>Ao vivo</Button>
+            <Button sx={theme("Geral")} onClick={() => { goToHomeNavPage(navigate,"Geral",setPageNow) }}>Geral</Button>
+            <Button sx={theme("Esporte")} onClick={() => { goToHomeNavPage(navigate,"Esporte",setPageNow) }}>Esporte</Button>
+            <Button sx={theme("Entreterimento")} onClick={() => { goToHomeNavPage(navigate,"Entreterimento",setPageNow) }}>Entretenimento</Button>
+            <Button sx={theme("Saude")} onClick={() => { goToHomeNavPage(navigate,"Saude",setPageNow) }}>Saúde</Button>
+            <Button sx={theme("Economia")} onClick={() => { goToHomeNavPage(navigate,"Economia",setPageNow) }}>Economia</Button>
+            <Button sx={theme("Policia")} onClick={() => { goToHomeNavPage(navigate,"Policia",setPageNow) }}>Polícia</Button>
+            <Button sx={theme("Brasil")} onClick={() => { goToHomeNavPage(navigate,"Brasil",setPageNow) }}>Brasil</Button>
+            <Button sx={theme("Ao vivo")} onClick={() => { goToHomeNavPage(navigate,"Ao vivo",setPageNow) }}>Ao vivo</Button>
         </Stack>
     )
 }

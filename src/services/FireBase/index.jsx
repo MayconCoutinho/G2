@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app"
-import { collection, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
-import { v1, v4 } from 'uuid'
+import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
+import { v1 } from 'uuid'
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDxIg1nU21HM_dDJ3XGg2xntoWGcZehGdQ",
@@ -23,6 +24,16 @@ export const getNoticias = async () => {
     console.log(error.response)
   }
 }
+export const getLogin = async () => {
+  try {
+    const userCollectionRef = collection(db, "admin")
+    const querySnapshot = await getDocs(userCollectionRef)
+    const result = querySnapshot.docs.map((doc) => doc.data())
+    return result
+  } catch (error) {
+    console.log(error.response)
+  }
+}
 export const getAoVivo = async () => {
   try {
     const userCollectionRef = collection(db, "aovivo")
@@ -33,16 +44,27 @@ export const getAoVivo = async () => {
     console.log(error.response)
   }
 }
+
+export const delPost = async (id) => {
+  try {
+    const response = await deleteDoc(doc(db, "noticias", id))
+    return response
+  } catch (error) {
+    console.log(error.response)
+  }
+}
+
 export const postNoticias = async (form) => {
   try {
     const { genero, topico, imagem, noticia } = form
-
-    setDoc(doc(db, "noticias", v1()), {
+    const id = await  v1()
+    setDoc(doc(db, "noticias", id), {
       genero,
-      id:v4(),
+      id: id,
       topico,
       imagem,
-      noticia
+      noticia,
+      data: new Date().toISOString()
     });
   } catch (error) {
     console.log(error.response)

@@ -1,23 +1,29 @@
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel } from "@mui/material";
+import { Box, Button, CircularProgress, FormControl, IconButton, Input, InputAdornment, InputLabel } from "@mui/material";
 import { Stack } from "@mui/system";
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { goToAdminUser } from "../../routes/coordinator";
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { GlobalContext } from "../../global/context/useContext.js";
+import { Token } from '../../hooks/token';
 
 export const LoginPage = () => {
-  const navigate = useNavigate()
+  const { progresseLogin, setProgresseLogin } = useContext(GlobalContext)
 
-  const [values, setValues] = React.useState({
-    amount: '',
+  const navigate = useNavigate()
+  Token()
+  const [values, setValues] = useState({
     name: '',
     password: '',
     weight: '',
-    weightRange: '',
     showPassword: false,
   })
-
+  const Entrar = () => {
+    setProgresseLogin(true)
+    window.localStorage.setItem("tokenName",values.name)
+    window.localStorage.setItem("tokenPassword",values.password)
+    Token()
+  }
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
@@ -35,46 +41,46 @@ export const LoginPage = () => {
 
   return (
     <>
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        p: 1,
-        m: 1,
-        bgcolor: 'background.paper',
-        borderRadius: 1,
-        marginTop: 20
-      }}
-    >
-      <Stack spacing={2}>
-        <h1> Login </h1>
-        <FormControl variant="standard">
-          <InputLabel htmlFor="component-simple"> Name </InputLabel>
-          <Input id="component-simple" value={values.name} onChange={handleChange('name')} />
-        </FormControl>
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-          <Input
-            id="standard-adornment-password"
-            type={values.showPassword ? 'text' : 'password'}
-            value={values.password}
-            onChange={handleChange('password')}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          p: 1,
+          m: 1,
+          bgcolor: 'background.paper',
+          borderRadius: 1,
+          marginTop: 20
+        }}
+      >
+        <Stack spacing={2}>
+          <h1> Login </h1>
+          <FormControl variant="standard">
+            <InputLabel htmlFor="component-simple"> Name </InputLabel>
+            <Input id="component-simple" value={values.name} onChange={handleChange('name')} />
+          </FormControl>
+          <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+            <Input
+              id="standard-adornment-password"
+              type={values.showPassword ? 'text' : 'password'}
+              value={values.password}
+              onChange={handleChange('password')}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
         </Stack>
-    </Box>
-        <Box
+      </Box>
+      <Box
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -82,22 +88,24 @@ export const LoginPage = () => {
         }}
       >
         <Stack spacing={2}>
-        <Button
-          sx={{
-            paddingLeft: 10.3,
-            paddingRight: 10.3,
-            background: "#000",
-            '&:hover': {
-              backgroundColor: '#222'
-            },
-          }}
-          size="small"
-          variant="contained"
-          onClick={() => goToAdminUser(navigate)}
-        > Entrar </Button>
+          <Button
+            sx={{
+              paddingLeft: 10.3,
+              paddingRight: 10.3,
+              background: "#000",
+              '&:hover': {
+                backgroundColor: '#222'
+              },
+            }}
+            size="small"
+            variant="contained"
+            onClick={() => Entrar()}
+          > {progresseLogin === false ? "Entrar" : <CircularProgress size={25} sx={{
+            color:"#fff",
+            }}/>} </Button>
 
-      </Stack>
-    </Box>
+        </Stack>
+      </Box>
     </>
   )
 }
