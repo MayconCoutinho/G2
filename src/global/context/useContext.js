@@ -23,6 +23,6 @@ export const GlobalProvider = ({ children }) => {
 
 
   return (
-    <GlobalContext.Provider value={{ pageNow, setPageNow, pageNowAdmin, setPageNowAdmin, newsletter, aoVivo, setPageUpdate, pageUpdate,progresseLogin, setProgresseLogin}}>{children}</GlobalContext.Provider>
+    <GlobalContext.Provider value={{ pageNow, setPageNow, pageNowAdmin, setPageNowAdmin, newsletter, aoVivo, setPageUpdate, pageUpdate,progresseLogin, setProgresseLogin }}>{children}</GlobalContext.Provider>
   )
 }

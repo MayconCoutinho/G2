@@ -1,8 +1,11 @@
-import { Box, Button, Grid, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { Autocomplete, Box, Button, Grid, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 import { useForm } from "../../../hooks/useForm";
-import { postNoticias } from "../../../services/FireBase";
+import { EditarNoticias } from "../../../services/FireBase";
+import { CardRender } from "./Card";
 
 export const EditarRender = ({ pageNowAdmin, newsletter }) => {
+  const [editar, setEditar] = useState(null)
 
   const { formValues, onChange, cleanFields } = useForm({
     genero: "",
@@ -12,8 +15,10 @@ export const EditarRender = ({ pageNowAdmin, newsletter }) => {
     noticia: "",
   })
 
+
   const SubmitForm = async () => {
-    await postNoticias(formValues)
+    console.log(formValues)
+    await EditarNoticias(formValues, newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.id}))
     alert("Formulario Enviado")
     cleanFields()
   }
@@ -29,7 +34,6 @@ export const EditarRender = ({ pageNowAdmin, newsletter }) => {
       >
         Ao vivo
       </Typography>
-
       <Typography
         fontFamily={"monospace"}
         fontSize={24}
@@ -54,88 +58,84 @@ export const EditarRender = ({ pageNowAdmin, newsletter }) => {
             gap={3}
           >
             <InputLabel id="demo-simple-select-label" > Escolha a noticia </InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              name="genero"
-              value={formValues.genero}
-              label="Genero"
-              onChange={onChange}
-            >
-              {newsletter.map((item) => {
-                return <MenuItem
-                  value={item.id}
-                  sx={{
-                    margin: 0,
-                    overflow: "hidden",
-                    whiteSpace: "nowrap",
-                    textOverflow: "ellipsis",
-                    fontWeight:400,
-                  }}
-                > {item.topico.substr(0, 30)}...</MenuItem>
-              })}
-            </Select>
-
-            <InputLabel id="demo-simple-select-label">Genero</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              name="genero"
-              value={formValues.genero}
-              label="Genero"
-              onChange={onChange}
-            >
-              <MenuItem value={"Geral"}>Geral</MenuItem>
-              <MenuItem value={"Esporte"}>Esporte</MenuItem>
-              <MenuItem value={"Entreterimento"}>Entreterimento</MenuItem>
-              <MenuItem value={"Saude"}>Saúde</MenuItem>
-              <MenuItem value={"Economia"}>Economia</MenuItem>
-              <MenuItem value={"Policia"}>Polícia</MenuItem>
-              <MenuItem value={"Brasil"}>Brasil</MenuItem>
-            </Select>
-            <TextField
-              required
-              id="outlined-required"
-              defaultValue={"teste"}
-              label="topico"
-              name="topico"
-              value={formValues.topico}
-              onChange={onChange}
-            />
-            <TextField
-              required
-              id="outlined-required"
-              label="URL imagem"
-              name="imagem"
-              value={formValues.imagem}
-              onChange={onChange}
-              title="URL imagem"
-              defaultValue={"teste"}
-            />
-            <TextField
-              required
-              id="outlined-required"
-              defaultValue={"teste"}
-              multiline
-              rows={8}
-              label="noticia"
-              name="noticia"
-              value={formValues.noticia}
-              onChange={onChange}
-            />
-            <Button
-              sx={{
-                paddingLeft: 10.3,
-                paddingRight: 10.3,
-                background: "#000",
-                '&:hover': {
-                  backgroundColor: '#222'
-                },
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={newsletter.map((item) => { return item.topico })}
+              renderInput={(params) => <TextField {...params} label="Pesquisa" />}
+              value={editar}
+              onChange={(event, newValue) => {
+                setEditar(newValue)
               }}
-              size="small"
-              variant="contained"
-              onClick={() => { SubmitForm() }}
-            > Posta noticia </Button>
+            />
+            {editar === null || editar === undefined ?
+            <></>
+            :
+              <>
+              <CardRender newsletter={newsletter.filter((item) => { return item.topico === editar})}/>
+                <InputLabel id="demo-simple-select-label">Genero</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  name="genero"
+                  value={formValues.genero}
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.genero})}
+                  label="Genero"
+                  onChange={onChange}
+                >
+                  <MenuItem value={"Geral"}>Geral</MenuItem>
+                  <MenuItem value={"Esporte"}>Esporte</MenuItem>
+                  <MenuItem value={"Entreterimento"}>Entreterimento</MenuItem>
+                  <MenuItem value={"Saude"}>Saúde</MenuItem>
+                  <MenuItem value={"Economia"}>Economia</MenuItem>
+                  <MenuItem value={"Policia"}>Polícia</MenuItem>
+                  <MenuItem value={"Brasil"}>Brasil</MenuItem>
+                </Select>
+                <TextField
+                  required
+                  id="outlined-required"
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.topico})}
+                  label="topico"
+                  name="topico"
+                  value={formValues.topico}
+                  onChange={onChange}
+                />
+                <TextField
+                  required
+                  id="outlined-required"
+                  label="URL imagem"
+                  name="imagem"
+                  value={formValues.imagem}
+                  onChange={onChange}
+                  title="URL imagem"
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.imagem})}
+                />
+                <TextField
+                  required
+                  id="outlined-required"
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.noticia})}
+                  multiline
+                  rows={8}
+                  label="noticia"
+                  name="noticia"
+                  value={formValues.noticia}
+                  onChange={onChange}
+                />
+                <Button
+                  sx={{
+                    paddingLeft: 10.3,
+                    paddingRight: 10.3,
+                    background: "#000",
+                    '&:hover': {
+                      backgroundColor: '#222'
+                    },
+                  }}
+                  size="small"
+                  variant="contained"
+                  onClick={() => { SubmitForm() }}
+                > Editar notícias </Button>
+              </>
+            }
           </Box>
         </Grid>
       </form>

@@ -11,8 +11,13 @@ export const goToVoltar = (navigate) => {
 export const goToLogin = (navigate) => {
   navigate("/Admin")
 }
-export const goToAdminUser = (navigate) => {
-  navigate("/Admin/User")
+export const goToAdminUser = (navigate,page, setPageNowAdmin) => {
+  if(page === null || page === undefined){
+    navigate(`/Admin/User/${'Adicionar'}`)
+  } else{
+    setPageNowAdmin(page )
+    navigate(`/Admin/User/${page}`)
+  }
 }
 export const goToNewsPage = (navigate, id) => {
   navigate(`/NewsPage/${id}`)

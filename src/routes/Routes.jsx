@@ -14,7 +14,7 @@ export const Router = () => {
                 <Route path="*" element={<ErrorPage />} />
                 <Route path="/:page" element={<NavPage />} />
                 <Route path="Admin" element={<LoginPage />} />
-                <Route path="Admin/User" element={<AdminPage />} />
+                <Route path="Admin/User/:page" element={<AdminPage />} />
                 <Route path="NewsPage/:id" element={<NewsPage />} />
             </Routes>
         </BrowserRouter>
