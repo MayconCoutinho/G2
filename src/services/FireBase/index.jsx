@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc } from "firebase/firestore"
+import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc, updateDoc } from "firebase/firestore"
 import { v1 } from 'uuid'
 
 
@@ -47,17 +47,31 @@ export const getAoVivo = async () => {
 
 export const delPost = async (id) => {
   try {
-    const response = await deleteDoc(doc(db, "noticias", id))
+    const dbRef = doc(db, "noticias", id)
+    const response = await deleteDoc(dbRef)
     return response
   } catch (error) {
     console.log(error.response)
   }
 }
-
+export const EditarNoticias = async (form, id) => {
+  try {
+    const { genero, topico, imagem, noticia } = form
+    const dbRef = doc(db, "noticias", id[0])
+    await updateDoc(dbRef, {
+      genero,
+      topico,
+      imagem,
+      noticia
+    })
+  } catch (error) {
+    console.log(error.response)
+  }
+}
 export const postNoticias = async (form) => {
   try {
     const { genero, topico, imagem, noticia } = form
-    const id = await  v1()
+    const id = await v1()
     setDoc(doc(db, "noticias", id), {
       genero,
       id: id,
