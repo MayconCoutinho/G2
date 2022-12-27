@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react';
-import { ButtonSair } from '../Admin/buttonSair';
+import { ButtonSair } from '../Admin/ButtonSair';
 
 export const HeaderAdmin = () => {
   return (

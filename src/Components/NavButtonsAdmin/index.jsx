@@ -42,6 +42,7 @@ export const NavButtonsAdmin = () => {
       <Button sx={theme("Adicionar")} onClick={() => { goToAdminUser(navigate, "Adicionar", setPageNowAdmin) }}>Adicionar</Button>
       <Button sx={theme("Excluir")} onClick={() => { goToAdminUser(navigate, "Excluir", setPageNowAdmin) }}>Excluir</Button>
       <Button sx={theme("Editar")} onClick={() => { goToAdminUser(navigate, "Editar", setPageNowAdmin) }}>Editar</Button>
+      <Button sx={theme("Aovivo")} onClick={() => { goToAdminUser(navigate, "Aovivo", setPageNowAdmin) }}>Ao vivo</Button>
     </Stack>
   )
 }

@@ -12,7 +12,7 @@ export const goToLogin = (navigate) => {
   navigate("/Admin")
 }
 export const goToAdminUser = (navigate,page, setPageNowAdmin) => {
-  if(page === null || page === undefined){
+  if(!page){
     navigate(`/Admin/User/${'Adicionar'}`)
   } else{
     setPageNowAdmin(page )

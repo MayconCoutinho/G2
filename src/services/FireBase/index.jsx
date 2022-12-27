@@ -55,14 +55,46 @@ export const delPost = async (id) => {
   }
 }
 export const EditarNoticias = async (form, id) => {
+  console.log(form, id)
   try {
     const { genero, topico, imagem, noticia } = form
+
     const dbRef = doc(db, "noticias", id[0])
+    if (genero) {
+      await updateDoc(dbRef, {
+        genero
+      })
+    }
+    if (topico) {
+      await updateDoc(dbRef, {
+        topico
+      })
+    }
+    if (imagem) {
+      await updateDoc(dbRef, {
+        imagem
+      })
+    }
+    if (noticia) {
+      await updateDoc(dbRef, {
+        noticia
+      })
+    }
+
+
+  } catch (error) {
+    console.log(error.response)
+  }
+}
+export const EditarAovivo = async (form) => {
+  try {
+    const { video, videChat } = form
+    const dbRef = doc(db, "aovivo", "fuyGfPTsnkeRHQhcNpDC")
     await updateDoc(dbRef, {
-      genero,
-      topico,
-      imagem,
-      noticia
+      video
+    })
+    await updateDoc(dbRef, {
+      videChat
     })
   } catch (error) {
     console.log(error.response)
