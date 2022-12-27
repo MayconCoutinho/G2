@@ -14,26 +14,14 @@ export const EditarRender = ({ pageNowAdmin, newsletter }) => {
     imagem: "",
     noticia: "",
   })
-
-
   const SubmitForm = async () => {
     console.log(formValues)
-    await EditarNoticias(formValues, newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.id}))
+    await EditarNoticias(formValues, newsletter.filter((item) => { return item.topico === editar }).map((item) => { return item.id }))
     alert("Formulario Enviado")
     cleanFields()
   }
   if (pageNowAdmin.toLowerCase() === "editar") {
     return <>
-      <Typography
-        fontFamily={"monospace"}
-        fontSize={24}
-        fontWeight={400}
-        marginTop={5}
-        marginBottom={5}
-        textAlign={"center"}
-      >
-        Ao vivo
-      </Typography>
       <Typography
         fontFamily={"monospace"}
         fontSize={24}
@@ -69,17 +57,16 @@ export const EditarRender = ({ pageNowAdmin, newsletter }) => {
               }}
             />
             {editar === null || editar === undefined ?
-            <></>
-            :
+              <></>
+              :
               <>
-              <CardRender newsletter={newsletter.filter((item) => { return item.topico === editar})}/>
+                <CardRender newsletter={newsletter.filter((item) => { return item.topico === editar })} />
                 <InputLabel id="demo-simple-select-label">Genero</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   name="genero"
                   value={formValues.genero}
-                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.genero})}
                   label="Genero"
                   onChange={onChange}
                 >
@@ -94,26 +81,28 @@ export const EditarRender = ({ pageNowAdmin, newsletter }) => {
                 <TextField
                   required
                   id="outlined-required"
-                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.topico})}
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar }).map((item) => { return item.topico })}
                   label="topico"
+                  multiline
                   name="topico"
                   value={formValues.topico}
                   onChange={onChange}
                 />
                 <TextField
                   required
+                  multiline
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar }).map((item) => { return item.imagem })}
                   id="outlined-required"
                   label="URL imagem"
                   name="imagem"
                   value={formValues.imagem}
                   onChange={onChange}
                   title="URL imagem"
-                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.imagem})}
                 />
                 <TextField
                   required
                   id="outlined-required"
-                  defaultValue={newsletter.filter((item) => { return item.topico === editar}).map((item) => { return item.noticia})}
+                  defaultValue={newsletter.filter((item) => { return item.topico === editar }).map((item) => { return item.noticia })}
                   multiline
                   rows={8}
                   label="noticia"
