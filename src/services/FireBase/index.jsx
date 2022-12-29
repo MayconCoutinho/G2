@@ -88,14 +88,20 @@ export const EditarNoticias = async (form, id) => {
 }
 export const EditarAovivo = async (form) => {
   try {
-    const { video, videChat } = form
+    const { video, videoChat } = form
+    console.log(form)
     const dbRef = doc(db, "aovivo", "fuyGfPTsnkeRHQhcNpDC")
-    await updateDoc(dbRef, {
-      video
-    })
-    await updateDoc(dbRef, {
-      videChat
-    })
+    if (video) {
+      await updateDoc(dbRef, {
+        video
+      })
+    }
+    if (videoChat) {
+
+      await updateDoc(dbRef, {
+        videoChat
+      })
+    }
   } catch (error) {
     console.log(error.response)
   }

@@ -14,7 +14,7 @@ export const GlobalProvider = ({ children }) => {
   useEffect(() => {
     const resultNoticias = getNoticias()
     resultNoticias.then((response) => {
-      setNewsletter(response.reverse())
+      setNewsletter(response)
     })
 
     const resultAoVivo = getAoVivo()

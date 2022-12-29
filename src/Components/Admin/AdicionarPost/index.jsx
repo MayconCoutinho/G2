@@ -1,4 +1,5 @@
-import { Box, Button, Grid, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { Box, Button, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 import { useForm } from "../../../hooks/useForm";
 import { postNoticias } from "../../../services/FireBase";
 
@@ -28,25 +29,26 @@ export const CriarNoticiaRender = ({ pageNowAdmin }) => {
       >
         Crie uma Notícia
       </Typography>
-      <form onSubmit={SubmitForm}>
-        <Grid
-          container
-          justifyContent={"center"}
-          mb={4}
+      <Grid
+        container
+        justifyContent={"center"}
+        mb={4}
+      >
+        <Box
+          marginTop={5}
+          display={"grid"}
+          width={600}
+          padding={2.5}
+          gap={3}
         >
-          <Box
-            marginTop={5}
-            display={"grid"}
-            width={600}
-            padding={2.5}
-            gap={3}
-          >
-            <InputLabel id="demo-simple-select-label">Genero</InputLabel>
+          <FormControl onSubmit={SubmitForm}>
+            <Stack  spacing={3} >
             <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
+              displayEmpty
+              labelId="demo-multiple-name-label"
+              id="demo-multiple-name"
               name="genero"
-              value={formValues.genero}
+              value={formValues.genero }
               label="Genero"
               onChange={onChange}
             >
@@ -99,9 +101,10 @@ export const CriarNoticiaRender = ({ pageNowAdmin }) => {
               variant="contained"
               onClick={() => { SubmitForm() }}
             > Posta noticia </Button>
-          </Box>
-        </Grid>
-      </form>
+             </Stack>
+          </FormControl>
+        </Box>
+      </Grid>
     </>
   }
 }
