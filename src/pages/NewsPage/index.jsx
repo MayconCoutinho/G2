@@ -10,6 +10,12 @@ export const NewsPage = () => {
   const { id } = useParams()
   const { newsletter } = useContext(GlobalContext)
 
+  const ConvertendoDataHora = (item) => {
+    const data1 = item.data.substr(0, 10).split("-").reverse()
+    const hora1 = item.data.substr(11, 5).replace(":", "h")
+    return data1[0] + "/" + data1[1] + "/" + data1[2] + " " + hora1
+  }
+
   return (
     <>
       <Header />
@@ -42,6 +48,22 @@ export const NewsPage = () => {
               }}>
                 {item.topico}
               </Typography>
+              <Typography component="h4" variant="h4" sx={{
+                paddingTop: 2,
+                paddingBottom: 4,
+                paddingRight: 1,
+                fontWeight: 500,
+                fontSize: "16px",
+                fontFamily: "Open Sans",
+                letterSpacing: "-0.02em",
+                fontVariationSettings: "initial",
+                marginLeft: "24px",
+                maxWidth: "800px",
+                color: "#555"
+              }}>
+                {ConvertendoDataHora(item)}
+              </Typography>
+
               <CardMedia
                 component="img"
                 sx={{
@@ -91,8 +113,8 @@ export const NewsPage = () => {
               <Skeleton width={250} animation={false} />
             </Box>
 
-            <Box  marginTop={5} >
-              <Skeleton  width={300} height={250} variant="rectangular" />
+            <Box marginTop={5} >
+              <Skeleton width={300} height={250} variant="rectangular" />
             </Box>
             <Box marginTop={5}>
               <Skeleton width={320} />
