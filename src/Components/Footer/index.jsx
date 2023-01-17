@@ -1,4 +1,4 @@
-import { Box, Stack, Link } from '@mui/material';
+import { Box, Link, Stack } from '@mui/material';
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 
@@ -39,7 +39,7 @@ export const Footer = () => {
                     marginBottom: 4,
                 }}
             >
-                RC News
+              G2
 
             </Stack>
             <Stack direction="row" spacing={2}>
@@ -50,7 +50,7 @@ export const Footer = () => {
                 </Link>
                 <Link
                     target="_blank"
-                    href='https://web.whatsapp.com/'><IoLogoWhatsapp color='#fff' fontSize={50} />
+                    href='https://api.whatsapp.com/'><IoLogoWhatsapp color='#fff' fontSize={50} />
                 </Link>
                 <Link
                     target="_blank"
@@ -70,7 +70,7 @@ export const Footer = () => {
                 textAlign: "center",
                 marginTop: 20,
             }}>
-                &copy;2022, Newsletter RC News. All rights reserved.
+                &copy;2023, G2 Newsletter. All rights reserved.
             </span>
         </Box >
 

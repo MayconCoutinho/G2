@@ -30,7 +30,7 @@ export const HeaderAdmin = () => {
           letterSpacing: "2px",
         }}
       >
-        RC News
+        G2
       </Stack>
       <ButtonSair />
 

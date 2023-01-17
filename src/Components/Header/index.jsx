@@ -26,7 +26,7 @@ export const Header = () => {
           letterSpacing: "2px",
         }}
       >
-        RC News
+        G2
       </Stack>
     </Box>
 
