@@ -2,6 +2,7 @@ import { Box, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { goToNewsPage } from '../../../../routes/coordinator.jsx';
+import { Publicidade } from '../../../Publicidade/index.jsx';
 import { ButtonVejaMais } from '../../ButtonVejaMais/index.jsx';
 
 export const GeneroNoticia = ({ newsletter, pageNow }) => {
@@ -79,8 +80,9 @@ export const GeneroNoticia = ({ newsletter, pageNow }) => {
                     fontSize={"1rem"}
                     color={"#ff5100"}
                     fontFamily={"opensans, opensans-bastian, Arial, sans-serif"}
+                    backgroundColor={"#000"}
                   >
-                    publicidade
+                    {Publicidade()}
                   </Typography> : <>
 
                   </>}

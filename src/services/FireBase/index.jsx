@@ -1,7 +1,6 @@
-import { initializeApp } from "firebase/app"
-import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc, updateDoc } from "firebase/firestore"
-import { v1 } from 'uuid'
-
+import { initializeApp } from "firebase/app";
+import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc, updateDoc } from "firebase/firestore";
+import { v1 } from 'uuid';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDxIg1nU21HM_dDJ3XGg2xntoWGcZehGdQ",
@@ -10,7 +9,7 @@ const firebaseConfig = {
   storageBucket: "fir-teste-df160.appspot.com",
   messagingSenderId: "615236290881",
   appId: "1:615236290881:web:dcdaf74ea313196a2df9c0"
-}
+};
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore(firebaseApp)
 
