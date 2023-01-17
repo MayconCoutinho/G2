@@ -21,11 +21,11 @@
 
 
 <div align="center"> 
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002036-b410c861-4fcb-4a5b-b596-eddf943d8f83.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002039-cab6f108-8df0-4155-af25-b7ebade19008.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002041-442ee02e-92c6-4536-9c18-cbfd3ec23778.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002043-41088a21-2d7d-4cbd-824f-ac9656cf4769.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002045-e6b7a89b-85d5-463e-a28e-1f27b9930b00.png'></img>
+  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002036-b410c861-4fcb-4a5b-b596-eddf943d8f83.png'></img>
+  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002039-cab6f108-8df0-4155-af25-b7ebade19008.png'></img>
+  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002041-442ee02e-92c6-4536-9c18-cbfd3ec23778.png'></img>
+  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002043-41088a21-2d7d-4cbd-824f-ac9656cf4769.png'></img>
+  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002045-e6b7a89b-85d5-463e-a28e-1f27b9930b00.png'></img>
 </div> 
 
 ## 🚀 Tecnologias
