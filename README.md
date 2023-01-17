@@ -5,10 +5,10 @@
 ## 📲 User demo ➜ [Link Surge](https://g2-newspaper.surge.sh/)
 
 <div align="center"> 
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213001007-21b27d35-f339-42f6-a19d-e977ebb1d774.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213001017-1693ec5c-9830-49db-a6ff-32f13c29d319.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213001702-9a01b94b-8af6-4350-a88a-188dd456216a.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213001025-4ab123d6-1268-4d52-a6dd-d19d618989ff.png'></img>
+  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001007-21b27d35-f339-42f6-a19d-e977ebb1d774.png'></img>
+  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001017-1693ec5c-9830-49db-a6ff-32f13c29d319.png'></img>
+  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001702-9a01b94b-8af6-4350-a88a-188dd456216a.png'></img>
+  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001025-4ab123d6-1268-4d52-a6dd-d19d618989ff.png'></img>
 </div> 
 
 ## 🔐 Modo Admin  ➜ [Link Surge](https://g2-newspaper.surge.sh/admin)
@@ -21,11 +21,11 @@
 
 
 <div align="center"> 
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213002036-b410c861-4fcb-4a5b-b596-eddf943d8f83.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213002039-cab6f108-8df0-4155-af25-b7ebade19008.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213002041-442ee02e-92c6-4536-9c18-cbfd3ec23778.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213002043-41088a21-2d7d-4cbd-824f-ac9656cf4769.png'></img>
-  <img width='220px' src='https://user-images.githubusercontent.com/60453269/213002045-e6b7a89b-85d5-463e-a28e-1f27b9930b00.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002036-b410c861-4fcb-4a5b-b596-eddf943d8f83.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002039-cab6f108-8df0-4155-af25-b7ebade19008.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002041-442ee02e-92c6-4536-9c18-cbfd3ec23778.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002043-41088a21-2d7d-4cbd-824f-ac9656cf4769.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/213002045-e6b7a89b-85d5-463e-a28e-1f27b9930b00.png'></img>
 </div> 
 
 ## 🚀 Tecnologias
