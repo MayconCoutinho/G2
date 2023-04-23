@@ -40,6 +40,11 @@
   > Todos os resultados foram alcançados com sucesso. De modo geral são esses os resultados de cada requisição. 
 
  <br/>
+ 
+ ## Pagina web desktop 
+ 
+ <br/>
+
 
 | Home | Final da Pagina | 
 |---|---|
@@ -53,22 +58,86 @@
 |---|---|
 ![image](https://user-images.githubusercontent.com/60453269/233859735-78eaec2e-35d4-4b97-bcd4-0bd0c3484095.png)|![image](https://user-images.githubusercontent.com/60453269/233859764-8d96f3bd-5958-49f6-8b0a-f77ae3d2f458.png)
 
+<br/>
+
+## Pagina de Admin desktop
+  
+<br/>
+
+  
+| Login | Adicionar | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233860514-9718ea5f-f094-4204-94fb-1bfa4a67a0eb.png)|![image](https://user-images.githubusercontent.com/60453269/233860528-6cb185c3-0ffb-49a0-b659-9c2a640d037b.png)
+
+
+<br/>
+  
+<br/>
+
+| Excluir | editar | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233860548-74deb28e-a9cd-4fe1-ba7e-1e33816125c7.png)|![image](https://user-images.githubusercontent.com/60453269/233860578-ab290204-0133-495d-b607-3b8310c0df30.png)
+
+<br/>
+  
+<br/>
+
+| Editar ao vivo | 
+|---|
+![image](https://user-images.githubusercontent.com/60453269/233860605-3645fac6-9d13-4b80-8da2-a9bd69eb6e63.png)
+
+
+
+<br/>
+
 
 <a href="#Sumário"> 📖 Volta ao Sumário </a>
+
+<br/>
+ 
+ ## Pagina web mobile
+ 
+<br/>
   
 | Home | Final da Pagina | 
 |---|---|
 ![image](https://user-images.githubusercontent.com/60453269/233860168-c2498bdc-52a4-4923-b2ab-6de202671796.png)|![image](https://user-images.githubusercontent.com/60453269/233860286-69ff043d-30dc-49f3-b789-7b92042a31ea.png)
    
+
 <br/>
-  
+ 
+ 
 <br/>
   
 | Pagina de notícias | Ao vivo | 
 |---|---|
 ![image](https://user-images.githubusercontent.com/60453269/233860316-0191682a-a729-4231-99dd-c5db4edc9a1a.png)|![image](https://user-images.githubusercontent.com/60453269/233860337-d08d4302-66b9-4d7a-b294-0494d7a65872.png)
 
+<br/>
 
+## Pagina de Admin mobile
+  
+<br/>
+
+| Login | Adicionar | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233861035-20386d26-c130-432d-9b85-2bdcf34bcad4.png)|![image](https://user-images.githubusercontent.com/60453269/233860974-fb87ed40-38c2-4cf7-9414-e67a8ffa4f37.png)
+
+<br/>
+<br/>
+
+| Excluir | editar | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233861002-1ad15693-dcdf-4ff1-9b9f-2b19bf1e6136.png)|![image](https://user-images.githubusercontent.com/60453269/233861013-14046bd6-6225-42e9-86d3-fec20c4d95f2.png)
+
+
+<br/>
+<br/>
+
+
+| Editar ao vivo | 
+|---|
+![image](https://user-images.githubusercontent.com/60453269/233861025-2f4033fe-37fd-4cc8-a6fa-47dfa989c481.png)
 
 <br /> 
   
