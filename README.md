@@ -1,53 +1,126 @@
-# G2 Newspaper
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/60453269/233859399-b6b40615-8d54-4c0e-b532-9d70ed77cd32.png" alt="Logo" width="180" height="180" />
+</p>
 
-<br/>
+<h1 align="center"> G2 </h1>
 
-## 📲 User demo ➜ [Link Surge](https://g2-newspaper.surge.sh/)
-
-<div align="center"> 
-  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001007-21b27d35-f339-42f6-a19d-e977ebb1d774.png'></img>
-  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001017-1693ec5c-9830-49db-a6ff-32f13c29d319.png'></img>
-  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001702-9a01b94b-8af6-4350-a88a-188dd456216a.png'></img>
-  <img width='200px' src='https://user-images.githubusercontent.com/60453269/213001025-4ab123d6-1268-4d52-a6dd-d19d618989ff.png'></img>
-</div> 
-
-## 🔐 Modo Admin  ➜ [Link Surge](https://g2-newspaper.surge.sh/admin)
-<br/>
-
-- Login: teste
-- Senha: testando
-
-<br/>
+<a id="Sumário"></a>
 
 
-<div align="center"> 
-  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002036-b410c861-4fcb-4a5b-b596-eddf943d8f83.png'></img>
-  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002039-cab6f108-8df0-4155-af25-b7ebade19008.png'></img>
-  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002041-442ee02e-92c6-4536-9c18-cbfd3ec23778.png'></img>
-  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002043-41088a21-2d7d-4cbd-824f-ac9656cf4769.png'></img>
-  <img width='150px' src='https://user-images.githubusercontent.com/60453269/213002045-e6b7a89b-85d5-463e-a28e-1f27b9930b00.png'></img>
-</div> 
-
-## 🚀 Tecnologias
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- HTML, CSS, Javascript
-- React.js
-- Mui Ui
-- Styled Components
-- Firebase
-- uuid v1
-- react-router-dom
+<p align="center">
+  <b> Site de Notícias </b></br>
+  <sub> Projeto de um freelancer de um site semelhante ao site de notícias do g1.
+  <sub>
+</p>
 
 
-## 💻 Projeto
- A aplicação consiste em um site de notícias semelhante ao G1, usando a tecnologia React.js, e FireBase no banco de dados. Após fazer login na área do admin é possível postar, deletar e editar notícias, além disso também é capaz editar o Ao vivo mudando o vídeo e o chat.  
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
+
+<p align="center">
+  <a href="#Introdução"> 🧩 Introdução </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Resultados"> 🚀 Resultados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Dependências"> 🧪 Dependências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Ideias">💡 Possíveis Melhorias </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Creditos"> 🏆 Créditos </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
  
+<br/>
+
+
+<a id="Introdução"></a>
+## 🧩 Introdução 
+
+  ***⠀⠀⠀⠀A aplicação é um site de notícias, semelhante ao G1, desenvolvido com a tecnologia React.js e FireBase como banco de dados. Ao fazer login na área do administrador, é possível publicar, excluir e editar notícias. Além disso, o administrador pode atualizar a seção Ao Vivo, modificando tanto o vídeo quanto o chat.***
+
+<br/>
+
+
+<a id="Resultados"></a>
+## 🚀 Resultados 
+  > Todos os resultados foram alcançados com sucesso. De modo geral são esses os resultados de cada requisição. 
+
+ <br/>
+
+| Home | Final da Pagina | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233859655-25f658c7-063a-47b9-81f8-34a35c6175be.png)|![image](https://user-images.githubusercontent.com/60453269/233859709-e42caf77-ac65-4b55-99e5-01c8c3336a91.png)
  
-## 🖥️ Libs para instalar e visualizar o projeto 
+<br/>
+  
+<br/>
 
-```node
+| Pagina de notícias | Ao vivo | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233859735-78eaec2e-35d4-4b97-bcd4-0bd0c3484095.png)|![image](https://user-images.githubusercontent.com/60453269/233859764-8d96f3bd-5958-49f6-8b0a-f77ae3d2f458.png)
 
+
+<a href="#Sumário"> 📖 Volta ao Sumário </a>
+  
+| Home | Final da Pagina | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233860168-c2498bdc-52a4-4923-b2ab-6de202671796.png)|![image](https://user-images.githubusercontent.com/60453269/233860286-69ff043d-30dc-49f3-b789-7b92042a31ea.png)
+   
+<br/>
+  
+<br/>
+  
+| Pagina de notícias | Ao vivo | 
+|---|---|
+![image](https://user-images.githubusercontent.com/60453269/233860316-0191682a-a729-4231-99dd-c5db4edc9a1a.png)|![image](https://user-images.githubusercontent.com/60453269/233860337-d08d4302-66b9-4d7a-b294-0494d7a65872.png)
+
+
+
+<br /> 
+  
+  <a href="#Sumário"> 📖 Volta ao Sumário </a>
+  
+<br /> 
+
+
+<a id="Dependências"></a>
+## 🧪 Dependências
+> Requisitos para rotar o codigo...
+
+<br/>
+
+## `📖 Instalação` 
+  
+  
+ <br /> 
+
+> Caso tenha Git basta da git clone, caso não tenha baixe o projeto completo em dowlon
+
+```BASH
+git clone https://github.com/MayconCoutinho/Site-de-noticias
+```
+
+<br /> 
+
+> Caso já tenha o Node em sua maquina basta instalar o projeto com npm i
+
+```BASH
+npm i 
+```
+
+<br /> 
+
+## `📖 Scripts` 
+
+```JSON
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+
+```
+
+<br/>
+
+## `📖 Dependencies` 
+
+```JSON
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -68,14 +141,42 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
     "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   }
+
+```
+
+<br/>
+
+<a href="#Sumário"> 📖 Volta ao Sumário </a>
+
+<br /> 
+
+<a id="Ideias"></a>
+## 💡 Possíveis Melhoras
+> Possíveis melhorias no código e no projeto, caso queira voltar e melhorá lo.
+
+<br /> 
+
+- [ ] ***- *** 
+
+
+<br/>
+
+<a href="#Sumário"> 📖 Volta ao Sumário </a>
+
+<br /> 
+
+<a id="Creditos"></a>
+## 🏆 Créditos
+> Todo o projeto foi feito por...
   
-  ```
+<br /> 
 
-## 🧑‍💻 Desenvolvedores  
+<div > 
 
-<div align="center"> 
-
-| [<img src="https://user-images.githubusercontent.com/60453269/213002493-da4a475b-5b8a-4fc7-b539-d27d888800be.jpeg" width=150><br><sub> Maycon Coutinho </sub>](https://www.linkedin.com/in/maycon-coutinho/) | 
-|---|
+| [<img src="https://user-images.githubusercontent.com/60453269/217899761-dc2d4e4b-3336-419d-9076-79304290aa0a.png" width=300><br><sub> Maycon Coutinho </sub>](https://www.linkedin.com/in/maycon-coutinho/) | ***Hello 😃 Se você chegou até aqui, acredito que gostou do meu projeto, nesse caso temos algo em comum, sendo assim que tal conversamos um pouco? Meu chama no linkedin 😁*** | 
+|---|---|
 
 </div> 
+  
+<br /> 
+
